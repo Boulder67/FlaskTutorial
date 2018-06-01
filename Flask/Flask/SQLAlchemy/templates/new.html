@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <body>
+<head>
+
+</head>
+
+    <h3>Students - Flask SQLAlchemy example</h3>
+
+
+      <hr/>
+
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "warning">
+            {{ message }}
+         </div>
+      {%- endfor %}
+
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "name">Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+         <label for = "email">City</label><br>
+         <input type = "text" name = "city" placeholder = "city" /><br>
+         <label for = "addr">Address</label><br>
+         <textarea name = "addr" placeholder = "addr"></textarea><br>
+         <label for = "PIN">Pin Code</label><br>
+         <input type = "text" name = "pin" placeholder = "pin" /><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+
+   </body>
+</html>
+<style>
+
+  .warning {
+    background-color: red;
+    text-align: center;
+
+    color: white;
+    width: 18%;
+    height:auto;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    border-style: double;
+    font-family:sans-serif;
+  }
+
+</style>

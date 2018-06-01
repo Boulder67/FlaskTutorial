@@ -1,0 +1,29 @@
+
+  .warning {
+    background-color: red;
+    text-align: center;
+
+    color: white;
+    width: 18%;
+    height:30px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    border-style: double;
+    font-family:sans-serif;
+  }
+
+
+.colorful {
+  background-color: red;
+  text-align: center;
+
+  color: white;
+  width: 18%;
+  height:30px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  border-style: double;
+  font-family:sans-serif;
+}
