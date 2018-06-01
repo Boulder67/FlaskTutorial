@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <title>Show Everything</title>
+   <head>
+
+   </head>
+   <body>
+
+      <h3>
+         <a href = "{{ url_for('CustomerPage') }}">
+           Comments - Flask  SQLAlchemy example</a>
+      </h3>
+
+      <hr/>
+
+
+      <div class = "bodycont">
+        <br>
+<div>
+
+
+     <table >
+        <thead>
+           <tr  align="center">
+              <th>ID</th>
+              <th>Name</th>
+              <th>E-mail</th>
+              <th>Age</th>
+              <th>Text Message</th>
+              <th>Gender</th>
+              <th>Information Request</th>
+              <th>Priority</th>
+              <th>Picture</th>
+           </tr>
+        </thead>
+
+        <tbody>
+           {% for user in usersinfo %}
+              <tr valign="top">
+                 <td>{{ user.id }}</td>
+                 <td>{{ user.firstname }} {{ user.lastname }}</td>
+                 <td>{{user.email}}</td>
+                 <td>{{user.age}}</td>
+                 <td>{{user.message}}</td>
+                 <td>{{user.sex}}</td>
+                 <td>{{user.infoRequest}}</td>
+                 <td>{{user.priority}}</td>
+                 <td><img src={{user.pict}}></td>
+               <!-- <td><img src=" {{url_for('static', filename=image_name)}}"></td> -->
+              </tr>
+           {% endfor %}
+        </tbody>
+     </table>
+
+
+      <br><br>
+
+
+<br>
+</div>
+</div>
+
+   </body>
+</html>
+<style>
+
+  .bodycont {
+
+    color: white;
+    text-align: center;
+    width: auto;
+    height:auto;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    border: 4px dotted darkgreen;
+    font-family:sans-serif;
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+  }
+table, th, td{
+background-color: darkgreen;
+vertical-align: top;
+text-align: cente;
+color: white;
+width:auto;
+height:auto;
+font-size: 14px;
+font-style: italic;
+font-weight: bold;
+font-family:sans-serif;
+border: 1px double black;
+align: center;
+
+}
+  img{
+    border-radius: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.5;
+
+  }
+
+  .bodtable {
+  background-color: darkgreen;
+  vertical-align: top;
+  text-align: left;
+  color: white;
+  width:80%;
+  height:auto;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+  border-style: double;
+  font-family:sans-serif;
+
+
+  }
+
+  .bod{
+
+    m
+}
+
+
+
+</style>
+
